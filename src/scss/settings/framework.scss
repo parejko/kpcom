@@ -1,15 +1,3 @@
-$siteurl: 'http://www.s1232640-85051.home-whs.pl/RIWEB';
-$grid:               true !default;
-$mobile-first:               true !default;
-
-$enable-flex:               false !default;
-$enable-rounded:            true !default;
-$enable-shadows:            false !default;
-$enable-gradients:          false !default;
-$enable-transitions:        false !default;
-$enable-hover-media-query:  false !default;
-$enable-grid-classes:       true !default;
-
 $grid-columns:               12 !default;
 
 
@@ -17,6 +5,7 @@ $page-width: 1200px;
 
 $width-increment: 4px;
 
+$margin-outside: 16px;
 $gutter-width: 20px;
 $columns-number: 12;
 $gutter-number: 11;
@@ -25,7 +14,6 @@ $column-width: 80px;
 
 $grid-gutter-width: 20px !default; // bylo  1.875rem
 
-$grid-type: 'fixed-column-width';
 
 
 
@@ -70,21 +58,6 @@ $zindex-modal-bg:          1040 !default;
 $zindex-modal:             1050 !default;
 
 
-// Pixel value used to responsively scale all typography. Applied to the `<html>` element.
-$font-size-root:             16px !default;
-
-// Font, line-height, and color for body text, headings, and more.
-
-$font-family-sans-serif:     "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif:          Georgia, "Times New Roman", Times, serif !default;
-$font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base:           $font-family-sans-serif !default;
-
-$line-height:                1.5 !default;
-
-
-
-$abbr-border-color:           #cccccc !default;
 
 //== Scaffolding
 //

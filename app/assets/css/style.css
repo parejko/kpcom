@@ -97,7 +97,7 @@
     .body-1, .header__menu, .logo {
       font-size: 20px; } }
 
-.caption {
+.caption, .card__description, .bio p, .awards p {
   font-size: 15px;
   font-weight: normal;
   font-style: normal;
@@ -385,7 +385,7 @@ strong {
 
 .container {
   width: 100%;
-  padding: 12px; }
+  padding: 16px; }
   @media only screen and (min-width: 1224px) {
     .container {
       width: 1200px;
@@ -468,7 +468,7 @@ strong {
   text-shadow: none; }
 
 .main {
-  padding: 100px 16px 0; }
+  padding: 60px 16px 0; }
   .main .headline {
     font-weight: 700;
     font-size: 64px;
@@ -579,6 +579,74 @@ strong {
   position: static;
   height: 100vh;
   overflow: hidden; }
+
+.card-grid {
+  margin: 60px -16px 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  @media only screen and (min-width: 768px) {
+    .card-grid {
+      width: 100%;
+      max-width: 100%; } }
+
+.card {
+  -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+  max-width: 50%;
+  padding: 16px; }
+  .card__image {
+    width: 100%; }
+
+.about {
+  max-width: 600px;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .about__section {
+    width: 100%; }
+    @media only screen and (min-width: 768px) {
+      .about__section {
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+        max-width: 50%; } }
+
+.picture {
+  -ms-flex-order: -1;
+      order: -1; }
+  @media only screen and (min-width: 768px) {
+    .picture {
+      margin-right: 50%; } }
+  .picture_img {
+    width: calc(100% - 8.5vw - 8.5vw);
+    margin: 8.5vw;
+    box-shadow: -8.5vw -8.5vw 0px 0px blue; }
+    @media only screen and (min-width: 768px) {
+      .picture_img {
+        width: calc(100% - 60px);
+        margin: 30px;
+        box-shadow: -30px -30px 0px 0px blue; } }
+
+.bio h2 {
+  font-size: 30px; }
+
+@media only screen and (min-width: 768px) {
+  .contact {
+    -ms-flex-order: -1;
+        order: -1; } }
+
+.awards {
+  margin-top: 50px; }
+  @media only screen and (min-width: 768px) {
+    .awards {
+      margin-left: 50%; } }
 
 html {
   box-sizing: border-box; }

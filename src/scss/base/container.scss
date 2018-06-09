@@ -9,7 +9,7 @@
 }
 .container {
   width: 100%;
-  padding: 12px;
+  padding: $margin-outside;
   @media #{$extra-large} {
     width: 1200px;
     margin: 0 auto;

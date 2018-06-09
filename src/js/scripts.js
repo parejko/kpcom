@@ -137,11 +137,13 @@
 
     });
   }
+  if ($('.main-gallery')) {
+    
     $('html,body').animate({
       scrollTop: $(document).height() / 3,
       scrollLeft: '300px'
   });
-  console.log('lol');
+}
 
   });
 
