@@ -4,6 +4,9 @@
   "author": "Katarzyna Parejko",
   "url": "gfd",
   "version": "0.1.0",
+  "scripts": {
+    "postinstall": "gulp build"
+  },
   "devDependencies": {
     "browser-sync": "^2.24.4",
     "gulp": "^3.9.1",
