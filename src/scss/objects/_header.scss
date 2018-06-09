@@ -1,17 +1,27 @@
 .header {
-  display: flex;
-  justify-content: space-between;
+  position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 15;
+display: flex;
+justify-content: space-between;
+margin-right: auto;
+margin-left: auto;
+max-width: 1224px;
 
+&__menu {
+  @extend %body-1;
+  padding: 12px;
+}
 }
 
 .logo {
-  width: 200px;
+  @extend %body-1;
   a{
     display: block;
     padding: 12px;
-  }
-  svg {
-    width:100%;
+    color: blue;
   }
 }
 .nav {

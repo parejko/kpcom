@@ -9,6 +9,9 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     cssnano = require('gulp-cssnano'),
     package = require('./package.json');
+    
+var sourcemaps = require("gulp-sourcemaps");
+var concat = require("gulp-concat");
 
 
 var banner = [
@@ -37,10 +40,11 @@ gulp.task('css', function () {
 });
 
 gulp.task('js',function(){
-  gulp.src('src/js/scripts.js')
+  gulp.src('src/js/*.js')
    // .pipe(jshint('.jshintrc'))
    // .pipe(jshint.reporter('default'))
     .pipe(header(banner, { package : package }))
+    .pipe(concat('scripts.js'))
     .pipe(gulp.dest('app/assets/js'))
     .pipe(uglify())
     .pipe(header(banner, { package : package }))

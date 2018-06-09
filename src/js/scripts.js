@@ -3,6 +3,7 @@
   'use strict';
 
   $(function () {
+    if ( 1 == 0) {
     var textJSON =
       [
         {
@@ -135,6 +136,12 @@
       });
 
     });
+  }
+    $('html,body').animate({
+      scrollTop: $(document).height() / 3,
+      scrollLeft: '300px'
+  });
+  console.log('lol');
 
   });
 
