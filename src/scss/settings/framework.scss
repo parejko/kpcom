@@ -1,0 +1,103 @@
+$siteurl: 'http://www.s1232640-85051.home-whs.pl/RIWEB';
+$grid:               true !default;
+$mobile-first:               true !default;
+
+$enable-flex:               false !default;
+$enable-rounded:            true !default;
+$enable-shadows:            false !default;
+$enable-gradients:          false !default;
+$enable-transitions:        false !default;
+$enable-hover-media-query:  false !default;
+$enable-grid-classes:       true !default;
+
+$grid-columns:               12 !default;
+
+
+$page-width: 1200px;
+
+$width-increment: 4px;
+
+$gutter-width: 20px;
+$columns-number: 12;
+$gutter-number: 11;
+$column-width: 80px;
+
+
+$grid-gutter-width: 20px !default; // bylo  1.875rem
+
+$grid-type: 'fixed-column-width';
+
+
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+        xs: 0,
+  // Small screen / phone
+        sm: 568px,
+  // Medium screen / tablet
+        md: 768px,
+  // Large screen / desktop
+        lg: 1024px,
+  // Extra large screen / wide desktop
+        xl: 1224px
+) !default;
+
+
+$container-max-widths: (
+        sm: 100%,
+        md: 100%,
+        lg: 100%,
+        xl: (1200px+$grid-gutter-width)
+) !default;
+
+$used-columns: (
+        a: sm-1-4,
+        b: 720px,
+        c: 940px,
+        d: (1200px+$grid-gutter-width)
+) !default;
+
+// Z-index master list
+//
+
+$zindex-navbar:            1000 !default;
+$zindex-dropdown:          1000 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
+$zindex-navbar-fixed:      1030 !default;
+$zindex-navbar-sticky:     1030 !default;
+$zindex-modal-bg:          1040 !default;
+$zindex-modal:             1050 !default;
+
+
+// Pixel value used to responsively scale all typography. Applied to the `<html>` element.
+$font-size-root:             16px !default;
+
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:     "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:          Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:           $font-family-sans-serif !default;
+
+$line-height:                1.5 !default;
+
+
+
+$abbr-border-color:           #cccccc !default;
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               #fff !default;
+//** Global text color on `<body>`.
+$body-color:                 #cccccc !default;
+
+//** Global textual link color.
+$link-color:            #cccccc !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%) !default;
+//** Link hover decoration.
+$link-hover-decoration: underline !default;

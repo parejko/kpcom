@@ -1,0 +1,18 @@
+// container
+//
+//  HTML elements unclassed
+//
+// Styleguide 4.2
+
+.chrome {
+  padding-top: 100px;
+}
+.container {
+  width: 100%;
+  padding: 12px;
+  @media #{$extra-large} {
+    width: 1200px;
+    margin: 0 auto;
+    
+  }
+}

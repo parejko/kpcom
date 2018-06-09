@@ -1,0 +1,30 @@
+// Colors
+//
+// We write colors $color-function--000--xy
+// where function is ex. primary, accent, warning, shadow
+// 000 - [100-900] where 400 is base color, < are lighter and > are darker (like Material Design Palette)
+// --xy - is for opacity
+// x - [D,L] where D is for dark background, L for Light background
+// y - [A..F] where A is opacity near 0.9 and F is near 0.1
+//
+// markup:
+//<div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+//
+//$primary - white;
+//
+// Styleguide 1.1
+
+$primary: white;
+$accent: #000000;
+$grey--700: #5a5a5a;
+
+$black: black;
+$white--DA: rgba(255,255,255,0.98);
+$white--DE: rgba(255,255,255,0.25);
+$white: white;
+$accent--LG: rgba($accent, 0.03);
+$accent--LC: rgba($accent, 0.5);
+
+$grey--850: #3c3c3c;
+$grey--950: #2d2d2d;
+$grey--900: #1e1e1e;

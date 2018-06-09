@@ -1,0 +1,29 @@
+// Grid preview
+//
+// Grid preview in HTML
+//
+// markup:
+//<div class="grid"><div class="container"><div class="grid-column vc_col-md-1"></div><div class="grid-column vc_col-md-1"></div><div class="grid-column vc_col-md-1"></div><div class="grid-column vc_col-md-1"></div><div class="grid-column vc_col-md-1"></div><div class="grid-column vc_col-md-1"></div><div class="grid-column vc_col-md-1"></div><div class="grid-column vc_col-md-1"></div><div class="grid-column vc_col-md-1"></div><div class="grid-column vc_col-md-1"></div><div class="grid-column vc_col-md-1"></div><div class="grid-column vc_col-md-1"></div></div></div>
+//
+//
+// Styleguide 3.1
+
+.grid {
+  position: fixed;
+  z-index: 99999999999999;
+
+  width: 100%;
+  height: 500px;
+}
+.grid-row {
+  width: 1200px;
+
+}
+.grid-column {
+  background: rgba(255, 132, 72, 0.2);
+  height: 500px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0!important;
+  width: 80px;
+}

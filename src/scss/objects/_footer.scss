@@ -1,0 +1,18 @@
+.footer {
+  padding: 24px 16px;
+
+  a {
+    color: black;
+    text-decoration: none;
+    &:hover {
+        color: grey;
+    text-decoration: none;
+    }
+  }
+
+}
+.h2 {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 8px;
+}

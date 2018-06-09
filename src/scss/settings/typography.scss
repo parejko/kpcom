@@ -1,0 +1,192 @@
+// Typography
+//
+//markup:
+//<div class="{$modifiers}">[ {$modifiers} ] Phasellus interdum massa ante, ac placerat felis ultricies at.</div>
+//
+// .display-5 - duzy tekst
+// .display-4 - duzy tekst
+// .display-3 - duzy tekst
+// .display-2 - duzy tekst
+// .display-1 - duzy tekst
+// .headline - tekst
+// .title - tekst
+// .subheading - tekst
+// .body-2 - tekst
+// .body-1 - tekst
+// .caption - tekst
+// .button - tekst
+//
+// Styleguide 1.2
+
+
+
+
+
+$serif: 'Times New Roman', Times, serif;
+$sans-serif: 'PxGroteskRegular', Helvetica-Neue, Helvetica, Arial, sans-serif;
+
+
+%display-5 {
+  font-size: 44px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  text-align: center;
+  color: $grey--900;
+  @media #{$small} {
+
+    font-size: 90px;
+  }
+
+}
+
+%display-4 {
+  font-size: 32px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.25;
+  @media #{$small} {
+
+    font-size: 72px;
+  }
+}
+
+%display-3 {
+  font-size: 28px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.18;
+  @media #{$small} {
+
+    font-size: 36px;
+  }
+}
+
+%display-2 {
+  font-size: 36px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+}
+
+%display-1 {
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  @media #{$small} {
+
+    font-size: 32px;
+  }
+
+}
+
+%headline {
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  color: $grey--900;
+}
+
+%title {
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  //letter-spacing: 2px;
+  line-height: 1.44;
+ // color: $grey--900;
+  @media #{$small} {
+
+  font-size: 26px;
+}
+}
+
+%subheading {
+  font-size: 15px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+ // letter-spacing: 2px;
+  color: $grey--950;
+  @media #{$small} {
+
+    font-size: 18px;
+  }
+
+}
+
+%body-2 {
+
+  font-size: 9px;
+}
+
+%body-1 {
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.58;
+  color: $grey--950;
+  @media #{$small} {
+
+    font-size: 20px;
+  }
+}
+
+%caption {
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: $grey--950;
+}
+
+%button {
+
+  font-size: 9px;
+}
+
+
+
+.display-5 {
+  @extend %display-5;
+}
+.display-4 {
+  @extend %display-4;
+}
+.display-3 {
+  @extend %display-3;
+}
+.display-2 {
+  @extend %display-2;
+}
+.display-1 {
+  @extend %display-1;
+}
+.headline {
+  @extend %headline;
+}
+.title {
+  @extend %title;
+}
+.subheading {
+  @extend %subheading;
+}
+.body-2 {
+  @extend %body-2;
+}
+.body-1 {
+  @extend %body-1;
+}
+.caption {
+  @extend %caption;
+}
+.button {
+  @extend %button;
+}
