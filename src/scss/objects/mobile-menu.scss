@@ -1,3 +1,9 @@
+
+
+.header__menu {
+  color: black;
+}
+
 .mobile-menu {
   background-color: blue;
   position: fixed;
@@ -14,28 +20,24 @@
   overflow-x: hidden;
   .container {
   }
+  &__body {
+    padding-top: 30px;
+  }
   &__nav {
     padding-left: 0;
 
     li {
       text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: white;
       margin: 20px;
       padding: 20px;
-      font-weight: 700;
-      font-size: 16px;
+      @extend %menu-item;
       list-style-type: none;
-      @media #{$small} {
-        margin: 10px;
-        padding: 10px;
-      }
       a {
-        color: currentColor;
+        color: white;
+        padding: 12px;
       }
       a:hover {
-        color: grey;
+        color: $primary-dark;
 
       }
     }
@@ -44,6 +46,10 @@
     display: block;
     #close-menu, .logo a {
       color: white;
+      &:hover {
+        color: $primary-dark;
+
+      }
     }
   }
 }
@@ -53,6 +59,13 @@
   height: 100vh;
   overflow: hidden;
 }
-.scroll #open-menu {
-
+#open-menu {
+  &:hover {
+    color: $color---primary;
+  }
+}
+.logo a {
+  &:hover {
+    color: $primary-dark;
+  }
 }

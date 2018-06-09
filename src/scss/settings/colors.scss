@@ -14,17 +14,20 @@
 //
 // Styleguide 1.1
 
-$primary: white;
-$accent: #000000;
+$color---primary: blue;
+$color---accent: #ff006a;
 $grey--700: #5a5a5a;
 
 $black: black;
 $white--DA: rgba(255,255,255,0.98);
 $white--DE: rgba(255,255,255,0.25);
 $white: white;
-$accent--LG: rgba($accent, 0.03);
-$accent--LC: rgba($accent, 0.5);
+$accent--LG: rgba($color---accent, 0.03);
+$accent--LC: rgba($color---accent, 0.5);
+$primary-dark: lighten($color---primary, 20);
 
+$grey--100: #f5f5f5;
+$grey--200: #d8d8d8;
 $grey--850: #3c3c3c;
 $grey--950: #2d2d2d;
 $grey--900: #1e1e1e;

@@ -137,11 +137,41 @@
 
     });
   }
-  if ($('.main-gallery')) {
+  if ($('.main-gallery').length) {
     
+  var galleryitem = $('.gallery__item');
+  var margingalleryTop = 60;
+  var margingalleryLeft = 40;
+  var animationTime = 2000;
+
+  if(galleryitem.length) {
     $('html,body').animate({
-      scrollTop: $(document).height() / 3,
-      scrollLeft: '300px'
+      scrollTop: galleryitem.offset().top - margingalleryTop,
+      scrollLeft: galleryitem.offset().left - margingalleryLeft
+  }, animationTime);
+}
+
+  galleryitem.each(function( index ) {
+
+
+    
+    $( this ).on("click", function () {
+      
+    if(index !== galleryitem.length - 1 && index + 1 < galleryitem.length) {
+
+      $('html,body').animate({
+        scrollTop: galleryitem.eq(index + 1).offset().top - margingalleryTop,
+        scrollLeft: galleryitem.eq(index + 1).offset().left - margingalleryLeft
+      }, animationTime);
+    }
+    else if (index + 1 == galleryitem.length) {
+      
+      $('html,body').animate({
+        scrollTop: galleryitem.eq(0).offset().top - margingalleryTop,
+        scrollLeft: galleryitem.eq(0).offset().left - margingalleryLeft
+      }, animationTime);
+    }
+    });
   });
 }
 

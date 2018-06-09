@@ -27,8 +27,8 @@ $sans-serif: 'PxGroteskRegular', Helvetica-Neue, Helvetica, Arial, sans-serif;
 
 
 %display-5 {
+  font-family: $sans-serif;
   font-size: 44px;
-  font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   text-align: center;
@@ -41,8 +41,8 @@ $sans-serif: 'PxGroteskRegular', Helvetica-Neue, Helvetica, Arial, sans-serif;
 }
 
 %display-4 {
+  font-family: $sans-serif;
   font-size: 32px;
-  font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.25;
@@ -53,38 +53,32 @@ $sans-serif: 'PxGroteskRegular', Helvetica-Neue, Helvetica, Arial, sans-serif;
 }
 
 %display-3 {
+  font-family: $sans-serif;
   font-size: 28px;
-  font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.18;
-  @media #{$small} {
-
-    font-size: 36px;
-  }
 }
 
 %display-2 {
+  font-family: $sans-serif;
   font-size: 36px;
-  font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: 1;
 }
 
 %display-1 {
-  font-size: 16px;
-  font-weight: bold;
+  font-family: $sans-serif;
+  font-size: 32px;
   font-style: normal;
   font-stretch: normal;
-  @media #{$small} {
-
-    font-size: 32px;
-  }
+  color: $color---primary;
 
 }
 
 %headline {
+  font-family: $sans-serif;
   font-size: 20px;
   font-weight: normal;
   font-style: normal;
@@ -94,53 +88,52 @@ $sans-serif: 'PxGroteskRegular', Helvetica-Neue, Helvetica, Arial, sans-serif;
 }
 
 %title {
+  font-family: $sans-serif;
   font-size: 18px;
-  font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   //letter-spacing: 2px;
   line-height: 1.44;
  // color: $grey--900;
-  @media #{$small} {
-
-  font-size: 26px;
-}
 }
 
 %subheading {
+  font-family: $sans-serif;
   font-size: 15px;
-  font-weight: bold;
   font-style: normal;
   font-stretch: normal;
  // letter-spacing: 2px;
   color: $grey--950;
-  @media #{$small} {
-
-    font-size: 18px;
-  }
 
 }
 
 %body-2 {
+  font-family: $sans-serif;
 
   font-size: 9px;
 }
 
 %body-1 {
-  font-size: 18px;
+  font-family: $sans-serif;
+  font-size: 16px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.58;
   color: $grey--950;
-  @media #{$small} {
-
-    font-size: 20px;
-  }
 }
 
 %caption {
+  font-family: $sans-serif;
   font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  color: $grey--950;
+}
+%note {
+  font-family: $sans-serif;
+  font-size: 12px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -148,45 +141,18 @@ $sans-serif: 'PxGroteskRegular', Helvetica-Neue, Helvetica, Arial, sans-serif;
 }
 
 %button {
-
-  font-size: 9px;
+  font-family: $sans-serif;
+  font-size: 14px;
 }
 
-
-
-.display-5 {
-  @extend %display-5;
-}
-.display-4 {
-  @extend %display-4;
-}
-.display-3 {
-  @extend %display-3;
-}
-.display-2 {
-  @extend %display-2;
-}
-.display-1 {
-  @extend %display-1;
-}
-.headline {
+%menu-item {
+  
   @extend %headline;
-}
-.title {
-  @extend %title;
-}
-.subheading {
-  @extend %subheading;
-}
-.body-2 {
-  @extend %body-2;
-}
-.body-1 {
-  @extend %body-1;
-}
-.caption {
-  @extend %caption;
-}
-.button {
-  @extend %button;
+
+  @media #{$medium} {
+  font-size: 40px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.18;
+  }
 }

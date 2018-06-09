@@ -1,0 +1,18 @@
+
+.gallery {
+width: 1400px;
+height: 1400px;
+position: relative;
+margin: 20vw;
+
+@media #{$medium} {
+  margin: 40px auto;
+}
+
+  div {
+    width: 295px;
+    img {
+      width: 100%;
+    }
+  }
+}

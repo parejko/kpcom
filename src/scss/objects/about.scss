@@ -1,47 +1,63 @@
-
 .about {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
 
   &__section {
-    width: 100%; 
+    width: 100%;
+    padding-bottom: 20px;
     @media #{$medium} {
       flex-grow: 0;
-     flex-shrink: 0;
-     flex-basis: 50%;
-     max-width: 50%;
+      flex-shrink: 0;
+      flex-basis: 50%;
+      max-width: 50%;
     }
+  }
+
+  h1 {
+    
+    @extend %display-1;
+    color: $color---primary;
+  }
+
+  h2 {
+    @extend %headline;
+    color: $color---primary;
+  }
+
+  h3 {
+
+    @extend %note;
+    color: $color---primary;
   }
 }
 
 .picture {
   order: -1;
-  
-@media #{$medium} {
-margin-right: 50%;
-}
+
+  @media #{$medium} {
+    margin-right: 50%;
+  }
 
   &_img {
     width: calc(100% - 8.5vw - 8.5vw);
     margin: 8.5vw;
     box-shadow: -8.5vw -8.5vw 0px 0px blue;
 
-    @media #{$medium} {
+    @media only screen and (min-width : 460px) {
       width: calc(100% - 60px);
       margin: 30px;
       box-shadow: -30px -30px 0px 0px blue;
     }
   }
-
 }
-.bio {
+.bio, .contact {
   p {
     @extend %caption;
   }
   h2 {
-    font-size: 30px;
+    @extend %display-1;
   }
 }
 .contact {
@@ -53,9 +69,37 @@ margin-right: 50%;
 .awards {
   margin-top: 50px;
   @media #{$medium} {
-  margin-left: 50%;
+    margin-left: 50%;
   }
   p {
+    @extend %caption;
+  }
+}
+
+
+.card-grid {
+  margin: 60px (-$margin-outside) 0;
+  display: flex;
+  flex-wrap: wrap;
+  @media #{$medium} {
+    width: 100%;
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+
+.card {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: $margin-outside;
+  @media #{$medium} {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  &__image {
+    width: 100%;
+  }
+  &__description {
     @extend %caption;
   }
 }
