@@ -184,40 +184,138 @@ $(document).ready(function () {
   }
   if ($('.main-gallery').length) {
     
-  var galleryitem = $('.gallery__item');
-  var margingalleryTop = 60;
-  var margingalleryLeft = 40;
-  var animationTime = 2000;
+//   var galleryitem = $('.gallery__item');
+//   var margingalleryTop = 60;
+//   var margingalleryLeft = 40;
+//   var animationTime = 2000;
 
-  if(galleryitem.length) {
-    $('html,body').animate({
-      scrollTop: galleryitem.offset().top - margingalleryTop,
-      scrollLeft: galleryitem.offset().left - margingalleryLeft
-  }, animationTime);
-}
+//   if(galleryitem.length) {
+//     $('html,body').animate({
+//       scrollTop: galleryitem.offset().top - margingalleryTop,
+//       scrollLeft: galleryitem.offset().left - margingalleryLeft
+//   }, animationTime);
+// }
 
-  galleryitem.each(function( index ) {
+//   galleryitem.each(function( index ) {
 
 
     
-    $( this ).on("click", function () {
+//     $( this ).on("click", function () {
       
-    if(index !== galleryitem.length - 1 && index + 1 < galleryitem.length) {
+//     if(index !== galleryitem.length - 1 && index + 1 < galleryitem.length) {
 
-      $('html,body').animate({
-        scrollTop: galleryitem.eq(index + 1).offset().top - margingalleryTop,
-        scrollLeft: galleryitem.eq(index + 1).offset().left - margingalleryLeft
-      }, animationTime);
-    }
-    else if (index + 1 == galleryitem.length) {
+//       $('html,body').animate({
+//         scrollTop: galleryitem.eq(index + 1).offset().top - margingalleryTop,
+//         scrollLeft: galleryitem.eq(index + 1).offset().left - margingalleryLeft
+//       }, animationTime);
+//     }
+//     else if (index + 1 == galleryitem.length) {
       
-      $('html,body').animate({
-        scrollTop: galleryitem.eq(0).offset().top - margingalleryTop,
-        scrollLeft: galleryitem.eq(0).offset().left - margingalleryLeft
-      }, animationTime);
+//       $('html,body').animate({
+//         scrollTop: galleryitem.eq(0).offset().top - margingalleryTop,
+//         scrollLeft: galleryitem.eq(0).offset().left - margingalleryLeft
+//       }, animationTime);
+//     }
+//     });
+//   });
+var centerTop = document.documentElement.scrollHeight / 2 - ($(window).height()/2);
+var centerLeft = document.documentElement.scrollWidth / 2 - ($(window).width()/2);
+
+//setInterval(function() {
+  // method to be executed;
+ // console.log(document.documentElement.scrollTop, document.documentElement.scrollLeft);
+document.body.scrollTop = document.documentElement.scrollTop = centerTop;
+document.body.scrollLeft = document.documentElement.scrollLeft = centerLeft;
+//}, 1000);
+
+
+  var ee = 1;
+
+  var eee = 1;
+  var alp = 0;
+
+
+  var bett = 0;
+  var gamm = 0;
+  var lol = 0;
+  var acc = false;
+
+  window.addEventListener('devicemotion', function(e) {
+
+    ee +=1;
+    
+    if (ee % 500 == 0)  {
+  
+  
+      //console.log(e.acceleration);
+  
     }
-    });
+    var value = 0.02;
+  if (e.acceleration.x > value || e.acceleration.y > value || e.acceleration.z > value) {
+    acc = true;
+  }
+  else {
+    acc = false;
+  }
+  
+   
   });
+
+
+window.addEventListener('deviceorientation', function(e) {
+    if (eee == 1) {
+      bett = e.beta;
+      gamm = e.gamma;
+    }
+  eee +=1;
+  
+  if (eee % 10 == 0)  {
+
+
+
+  }
+
+// lol +=1; 
+
+// console.log(e.beta, bett, e.beta - bett);
+
+this.console.log(acc);
+
+if (acc) {
+var roundPxChange = 50;
+var speedMove = 20;
+ document.body.scrollTop = document.documentElement.scrollTop = centerTop - ((Math.round((e.beta - bett)*roundPxChange)/roundPxChange) * speedMove) ;
+  document.body.scrollLeft = document.documentElement.scrollLeft = centerLeft + ((Math.round((gamm - e.gamma)*roundPxChange)/roundPxChange) * speedMove);
+
+ // document.body.scrollTop = document.documentElement.scrollTop = centerTop - ((e.beta - bett) * 20) ;
+  //document.body.scrollLeft = document.documentElement.scrollLeft = centerLeft + ((gamm - e.gamma) * 20);
+
+// $('html,body').animate({
+//   scrollTop: centerTop - ((Math.round((e.beta - bett)*5)/5) * 20),
+//   scrollLeft: centerLeft + ((Math.round((gamm - e.gamma)*5)/5) * 20)
+// }, 1);
+
+// $('html,body').animate({
+//   scrollTop: centerTop - ((e.beta - bett) * 20),
+//   scrollLeft: centerLeft + ((gamm - e.gamma) * 20)
+// }, 2);
+
+}
+
+
+
+// if (eee % 2 == 0)  {
+// $('html,body').animate({
+//   scrollTop: centerTop - ((e.beta - bett) * 20),
+//   scrollLeft: centerLeft + ((gamm - e.gamma) * 20)
+// }, 1);
+
+// // document.body.scrollTop = document.documentElement.scrollTop = centerTop - ((e.beta - bett) * 20) ;
+// // document.body.scrollLeft = document.documentElement.scrollLeft = centerLeft + ((gamm - e.gamma) * 20);
+// }
+
+});
+
 }
 
   });
